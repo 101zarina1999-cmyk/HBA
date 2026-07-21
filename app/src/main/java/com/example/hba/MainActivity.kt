@@ -613,6 +613,7 @@ fun PatientDetailScreen(patient: Patient, onBack: () -> Unit, onAddVisit: () -> 
 
 // ---------- ADD VISIT ----------
 
+@OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun AddVisitScreen(onSave: (Visit) -> Unit, onCancel: () -> Unit) {
     val today = remember { SimpleDateFormat("dd-MM-yyyy", Locale.US).format(Date()) }
